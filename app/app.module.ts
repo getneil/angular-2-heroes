@@ -22,8 +22,8 @@ import { AppRoutingModule }     from './app-routing.module';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpModule, // sequence is important define HttpModule first before InMemory
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    HttpModule,
   ],
   declarations: [
     AppComponent,

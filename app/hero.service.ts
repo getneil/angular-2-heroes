@@ -24,6 +24,9 @@ export class HeroService {
   // getHeroes(): Promise<Hero[]> {
   //   return Promise.resolve(HEROES);
   // }
+  handleError(error: Error) {
+    console.log(error);
+  }
   getHero(id: number): Promise<Hero> {
     return this.getHeroes()
                .then(heroes => _.find(heroes, { id }));
